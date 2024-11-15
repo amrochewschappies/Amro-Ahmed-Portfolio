@@ -1,0 +1,14 @@
+body{
+    background-color: black;
+}
+
+main{
+    background-color: aqua;
+    display: flex;
+}
+
+#backgroundVideo{
+    width: 90%;
+    position: absolute;
+    top: 0%;
+}
