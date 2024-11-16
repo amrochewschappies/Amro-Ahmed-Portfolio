@@ -1,0 +1,60 @@
+::-webkit-scrollbar {
+    width: 12px; 
+    height: 12px; 
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #FF90BC, #000000, #FF90BC); 
+    border-radius: 10px; 
+}
+
+body{
+    background-color: #FF90BC;
+    cursor: none;  
+}
+
+:root {
+    --cursor-size: 28px;
+    --bg: #FF90BC;
+  }
+  
+  #cursor {
+    position: fixed;
+    top: calc(var(--cursor-size) * -0.5);
+    left:  calc(var(--cursor-size) * -0.5);
+    pointer-events: none;
+    mix-blend-mode: difference;  
+    filter: url(#goo);
+  }
+  
+  .cursor-circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--cursor-size);
+    height: var(--cursor-size);
+    border-radius: var(--cursor-size);
+    background: var(--bg);
+    transform-origin: center center;
+  }
+  
+  
+  h1 {
+    margin: 0;
+    padding: 50px;
+    text-align: center;
+    font-size: 48px;
+    line-height: 1;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    user-select: none;
+  }
+  
+  .goo {
+    display: none;
+  }                                         
+            

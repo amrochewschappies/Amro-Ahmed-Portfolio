@@ -1,5 +1,6 @@
 #navBar{
     display: grid;
+    width: 50%;
 }
 
 #navBar ul{
@@ -20,7 +21,7 @@
 
 .navBarOption a{
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: black;
 }
 
 header{

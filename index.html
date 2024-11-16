@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,17 +10,62 @@
         loadNavbar("Home")
     </script>
     <link rel="stylesheet" href="./CSS/navigationBar.css">
-    <script src="./Javascript/videoScroll.js" defer></script>
+    <link rel="stylesheet" href="./CSS/generalStyling.css">
+    <script src="./Javascript/cursor.js" defer></script>
 </head>
+
 <body>
     <header>
         <nav id="navBar">
 
         </nav>
     </header>
-    
+
     <main>
-        <video src="./Videos/126662-736705634.mp4" id="backgroundVideo" muted loop></video>
+        <svg xmlns="http://www.w3.org/2000/svg" class="goo" version="1.1" width="100%">
+            <defs>
+                <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur"></feGaussianBlur>
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 35 -15"
+                        result="goo"></feColorMatrix>
+                    <feComposite in="SourceGraphic" in2="goo" operator="atop"></feComposite>
+                </filter>
+            </defs>
+        </svg>
+
+        <div id="cursor"></div>
+
+        <section id="hero-section">
+
+            <h1 id="main-heading">I'm Amro Ahmed.</h1>
+
+            <section id="about-me">
+                <h2>About Me</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore tempore assumenda dolor in, soluta
+                    nobis tempora dolorum est sequi numquam amet voluptates, ex, optio quam incidunt sit cum eligendi
+                    veritatis.
+                </p>
+                
+            </section>
+        </section>
+
+        <section id="portfolio-display">
+            <div id="dropdown-section">
+                <h2 id="dropdown-text">Select</h2>
+                <div id="dropdown-content">
+                  <button class="selectable-category">
+                    Web Development
+                  </button>
+                  <button class="selectable-category">
+                    Game Design
+                  </button>
+                  <button class="selectable-category">
+                    Personal Projects
+                  </button>
+                </div>
+        </section>
     </main>
 </body>
+
 </html>
