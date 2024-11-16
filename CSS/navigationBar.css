@@ -1,9 +1,9 @@
-#navBar{
+#nav-bar{
     display: grid;
     width: 50%;
 }
 
-#navBar ul{
+#nav-bar ul{
     list-style: none;
     display: flex;
 }
