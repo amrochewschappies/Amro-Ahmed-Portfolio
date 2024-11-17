@@ -28,6 +28,48 @@ carouselDots.forEach(dot => {
     }
 });
 
+carouselDots.forEach(dot => {
+    dot.addEventListener("mouseenter", function(){
+        if (carouselDots[currentIndex] != dot){
+            dot.style.backgroundColor = "yellow";
+            dot.style.width = "22%";
+            dot.style.height = "37%";
+        }
+    })
+});
+
+carouselDots.forEach(dot => {
+    dot.addEventListener("mouseleave", function(){
+        if (carouselDots[currentIndex] != dot){
+            dot.style.backgroundColor = "gray";
+            dot.style.width = "12%";
+            dot.style.height = "17%";
+        }
+        else{            
+            dot.style.backgroundColor = "black";
+            dot.style.width = "17%";
+            dot.style.height = "30%";
+        }
+    })
+});
+
+carouselDots.forEach((dot, index) => {
+    dot.addEventListener("click", function() {
+        currentIndex = index; 
+        carouselDots.forEach(dot => {
+            if (dot != carouselDots[currentIndex]){
+                dot.style.width = "12%";
+                dot.style.height = "17%"
+                dot.style.backgroundColor = "gray";
+            }
+        });
+        carouselDots[currentIndex].style.width = "17%";
+        carouselDots[currentIndex].style.height = "30%";
+        carouselDots[currentIndex].style.backgroundColor = "black";
+        image.src = previews[currentIndex];
+    });
+});
+
 previousButton.addEventListener("mouseenter", function(){
     let text = previousButton.querySelector("#previous-text");
     text.innerText = "";

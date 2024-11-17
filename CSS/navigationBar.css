@@ -1,5 +1,6 @@
 #nav-bar{
-    display: grid;
+    display: flex;
+    flex-direction: column;
     width: 20%;
     position: relative;
     margin-right: 0;

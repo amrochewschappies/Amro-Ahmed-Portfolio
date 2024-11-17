@@ -3,8 +3,11 @@ body {
 }
 
 main {
-    height: 200rem;
-    overflow-y: auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 86vh;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 #main-heading {
@@ -80,7 +83,7 @@ main {
     margin: 0 auto;               
     padding: 0 5%;         
     position: relative;
-    top: 5vh;       
+    top: 0vh;       
 }
 
 #previous-button,
@@ -129,7 +132,7 @@ main {
     align-items: center;
     background-color:#ffffff61;
     position: relative;
-    top: 15%;
+    top: 5%;
     width: 20%;
     height: 13%;
     gap: 4%;
@@ -153,6 +156,7 @@ main {
     border-radius: 20px;
     position: relative;
     transition: width 0.5s ease, height 0.5s ease;
+    z-index: 20;
 }
 
 #preview-image{
@@ -160,4 +164,18 @@ main {
     aspect-ratio: 16 / 9;
     padding-top: 2%;
     border-radius: 29px;
+}
+
+footer{
+    border-top: solid;
+    height: 15%;
+    width: 100%;
+    position: relative;
+    top: 5vh;
+}
+
+.icon-image{
+    padding-top: 0.5%;
+    width: 5%;
+    background: pink;
 }

@@ -21,6 +21,7 @@ body{
 :root {
     --cursor-size: 28px;
     --bg: #9af5b1;
+    --black: #000000;
   }
   
   #cursor {
@@ -60,3 +61,21 @@ body{
     display: none;
   }                                         
             
+  #top-line, #bottom-line{
+    stroke: var(--black);
+    transition: all 0.5s ease;
+    transform-origin: center;
+  }
+
+  #burger-svg:hover #top-line{
+    transform: rotate(-90deg);
+  }
+
+  #burger-svg:hover ~ #nav-bar {
+    opacity: 1;
+  }
+
+  #nav-bar{
+    transition: opacity 0.5s ease;
+    opacity: 0;
+  }
