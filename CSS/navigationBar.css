@@ -1,6 +1,9 @@
 #nav-bar{
     display: grid;
-    width: 50%;
+    width: 20%;
+    position: relative;
+    margin-right: 0;
+    padding-right: 0;
 }
 
 #nav-bar ul{
@@ -28,7 +31,9 @@ header{
     position: sticky;
     top: 0; 
     z-index: 1000; 
-    
+    display: flex;
+    margin: 0;
+    padding: 0 ;
 }
 
 
@@ -61,4 +66,16 @@ header{
     height: 60px; /* Adjust the height as needed */
     margin-left: auto; /* Push logo to the right */
     padding-right: 3%;
+}
+
+#name-logo{
+    width: 12%;
+    font-size: 2vw;
+    margin: 0;
+    padding: 0;
+}
+
+#name-section{
+    padding-top: 1%;
+    width: 80%;
 }

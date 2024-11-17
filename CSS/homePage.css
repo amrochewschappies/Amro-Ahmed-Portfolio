@@ -1,96 +1,163 @@
-body{
+body {
     overflow-x: hidden;
 }
 
-main{
+main {
     height: 200rem;
+    overflow-y: auto;
 }
-
 
 #main-heading {
     font-size: 12vw;
     color: #000000;
 }
 
-#hero-section{
-    display: flex;
-    padding-right: 2vw;
-}
-
-#about-me p{
-    display: flex;
-    justify-content: center;
+#hero-section {
+    display: flex;  
     align-items: center;
-    text-align: center;
-    font-size: 2vw;
-}
-
-#dropdown-trigger{
-    width: 30rem;
-    height: 3rem;
-    border-radius: 20px;
-    border: none;
-    background-color: rgb(255, 255, 255);
-}
-
-#dropdown-text{
-    font-size: 5vw;
-    text-align: center;
-    margin-bottom: 0;
-}
-
-#dropdown-content{
-    display: none;
-}
-
-#dropdown-text:hover + #dropdown-content {
-    display: flex;
     flex-direction: column;
-    background-color: wheat;
-  }
-
-#dropdown-section{
-    width: 40%;
 }
 
 #overview {
     position: fixed;
     top: 0;
     left: 0;
-    width: 200px;
-    height: 50vh;
-    background-color: rgba(0, 0, 0, 0.1); /* Light background */
+    width: 12%;
+    height: 60%;
+    background-color: rgba(0, 0, 0, 0.1); 
     border-radius: 5px;
     z-index: 1000;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Miniature preview of the entire content */
-  #mini-preview {
+}
+
+#mini-preview {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../Images/Screenshot\ Test.png'); /* Replace with a screenshot of your page */
-    background-size: 100% auto; /* Make it fit the container */
+    background-image: url('../Images/Screenshot\ Test.png'); 
+    background-size: contain; 
     background-repeat: no-repeat;
     background-position: top left;
-    opacity: 0.5; /* Optional: Make it slightly transparent */
-  }
-  
-  /* The scrollbar thumb (draggable part) */
-  #overview-scrollbar {
+    opacity: 0.5; 
+}
+
+#overview-scrollbar {
     position: absolute;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    z-index: 1; /* Ensure it sits on top of the mini-preview */
-  }
-  
-  /* Hover effect for the scrollbar thumb */
-  #overview-scrollbar:hover {
+    z-index: 1; 
+}
+
+
+#overview-scrollbar:hover {
     background-color: rgba(0, 0, 0, 0.5);
-  }
+}
+
+#previous-text {
+    transition: opacity 0.3s ease;
+    opacity: 1;
+    font-size: 2.2vw;
+    margin-left: 24%;
+}
+
+#next-text {
+    transition: opacity 0.3s ease;
+    opacity: 1;
+    font-size: 2.2vw;
+    margin-right: 20%;
+}
+
+#navigation-buttons {
+    display: flex;               
+    justify-content: space-between; 
+    align-items: center;           
+    width: 90vw;                   
+    margin: 0 auto;               
+    padding: 0 5%;         
+    position: relative;
+    top: 5vh;       
+}
+
+#previous-button,
+#next-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 15%;                     
+    height: 12vh;                    
+    border-radius: 20px;             
+    transition: width 0.5s ease;     
+}
+
+#previous-button:hover,
+#next-button:hover {
+    width: 20%;  
+}
+
+#previous-button:hover #previous-text,
+#next-button:hover #next-text {
+    opacity: 0;
+}
+
+#previous-button:hover #left-arrow,
+#next-button:hover #right-arrow {
+    transform: translateX(-180%);   
+}
+
+#left-arrow,
+#right-arrow {
+    width: 20%;
+    transition: transform 0.5s ease;  
+}
+
+#previous-button:hover #left-arrow {
+    transform: translateX(-180%);  
+}
+
+#next-button:hover #right-arrow {
+    transform: translateX(180%);   
+}
+
+#carousel-dots{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#ffffff61;
+    position: relative;
+    top: 15%;
+    width: 20%;
+    height: 13%;
+    gap: 4%;
+    border-radius: 20px;
+}
+
+
+#project-display {
+    width: 50%;
+    height: 25vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dot-placeholder{
+    background-color: rgb(0, 0, 0);
+    width: 12%;
+    height: 17%;
+    border-radius: 20px;
+    position: relative;
+    transition: width 0.5s ease, height 0.5s ease;
+}
+
+#preview-image{
+    width: 80%;
+    aspect-ratio: 16 / 9;
+    padding-top: 2%;
+    border-radius: 29px;
+}

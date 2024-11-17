@@ -12,11 +12,15 @@
     <link rel="stylesheet" href="./CSS/navigationBar.css">
     <link rel="stylesheet" href="./CSS/generalStyling.css">
     <script src="./Javascript/cursor.js" defer></script>
-    <script src="./Javascript/overview.js" defer></script>
+    <script src="./Javascript/carousel.js" defer></script>
+    <!-- <script src="./Javascript/overview.js" defer></script> -->
 </head>
 
 <body>
     <header>
+        <div id="name-section">
+            <h1 id="name-logo">Amro Ahmed</h1>
+        </div>
         <nav id="nav-bar">
 
         </nav>
@@ -37,39 +41,32 @@
         <div id="cursor"></div>
 
         <section id="hero-section">
+            <div id="project-display">
+                <img src="./Images/Mlungisi Logo.png" alt="Preview image of the project" id="preview-image">
+                <div id="carousel-dots">
 
-            <h1 id="main-heading">I'm Amro Ahmed.</h1>
+                </div>
+            </div>
+            <div id="navigation-buttons">
 
-            <section id="about-me">
-                <h2>About Me</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore tempore assumenda dolor in, soluta
-                    nobis tempora dolorum est sequi numquam amet voluptates, ex, optio quam incidunt sit cum eligendi
-                    veritatis.
-                </p>
-                
-            </section>
+                <div id="previous-button">
+                    <h2 id="previous-text">Previous Project</h2>
+                    <img src="./Images/Left Arrow.svg" alt="Arrow pointing towards the left" id="left-arrow">
+                </div>
+
+                <div id="next-button">
+                    <img src="./Images/Right Arrow.svg" alt="Arrow pointing towards the right" id="right-arrow">
+                    <h2 id="next-text">Next Project</h2>
+                </div>
+            </div>
         </section>
 
         <section id="portfolio-display">
-            <div id="overview">
+            <!-- <div id="overview">
                 <div id="mini-preview"></div>
                 <div id="overview-scrollbar"></div>
-            </div>
+            </div> -->
 
-            <div id="dropdown-section">
-                <h2 id="dropdown-text">Select</h2>
-                <div id="dropdown-content">
-                  <button class="selectable-category">
-                    Web Development
-                  </button>
-                  <button class="selectable-category">
-                    Game Design
-                  </button>
-                  <button class="selectable-category">
-                    Personal Projects
-                  </button>
-                </div>
         </section>
     </main>
 </body>

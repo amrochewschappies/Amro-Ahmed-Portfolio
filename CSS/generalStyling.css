@@ -8,18 +8,19 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(to bottom, #FF90BC, #000000, #FF90BC); 
+    background: linear-gradient(to bottom, #000000, #000000, #000000); 
     border-radius: 10px; 
 }
 
 body{
-    background-color: #FF90BC;
+    background-color: #66d1ff;
     cursor: none;  
+    margin-top: 0;
 }
 
 :root {
     --cursor-size: 28px;
-    --bg: #FF90BC;
+    --bg: #9af5b1;
   }
   
   #cursor {
@@ -29,6 +30,7 @@ body{
     pointer-events: none;
     mix-blend-mode: difference;  
     filter: url(#goo);
+    z-index: 10000;
   }
   
   .cursor-circle {
