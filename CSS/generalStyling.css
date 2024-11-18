@@ -13,14 +13,14 @@
 }
 
 body{
-    background-color: #66d1ff;
+    background-color: #e6e6e6;
     cursor: none;  
     margin-top: 0;
 }
 
 :root {
     --cursor-size: 28px;
-    --bg: #9af5b1;
+    --bg: #e6e6e6;
     --black: #000000;
   }
   
@@ -45,33 +45,32 @@ body{
     transform-origin: center center;
   }
   
-  
-  h1 {
-    margin: 0;
-    padding: 50px;
-    text-align: center;
-    font-size: 48px;
-    line-height: 1;
-    font-family: sans-serif;
-    text-transform: uppercase;
-    user-select: none;
-  }
-  
+
   .goo {
     display: none;
-  }                                         
+  }                
+  
+  #burger-menu{
+    width: 20%;
+  }
             
+  #burger-svg{
+    position: absolute;
+    top: -23%;
+    left: 91%;
+  }
+
   #top-line, #bottom-line{
     stroke: var(--black);
     transition: all 0.5s ease;
     transform-origin: center;
   }
 
-  #burger-svg:hover #top-line{
+  #burger-menu:hover #top-line{
     transform: rotate(-90deg);
   }
 
-  #burger-svg:hover ~ #nav-bar {
+  #burger-menu:hover #nav-bar{
     opacity: 1;
   }
 

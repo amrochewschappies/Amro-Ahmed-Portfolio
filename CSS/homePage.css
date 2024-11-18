@@ -164,6 +164,7 @@ main {
     aspect-ratio: 16 / 9;
     padding-top: 2%;
     border-radius: 29px;
+    transition: opacity 0.3s ease;
 }
 
 footer{

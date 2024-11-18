@@ -1,0 +1,66 @@
+.project-overview{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+    width: 100%;
+    margin-top: 4vh;
+    height: auto;
+}
+
+.item{
+    width: 40vw;
+    height: auto;
+    flex-grow: 1;
+    flex-basis: 200;
+}
+
+.project-image{
+    width: 80%;
+    aspect-ratio: 16 / 9;
+    padding: 2vh 2vw 2vh 2vw;
+}
+
+.project-description{
+    padding-left: 2vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-properties{
+    border-top: solid;
+    padding-top: 2vh;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+    position: relative;
+    top: 20vh;
+}
+
+.project-property{
+    width: 12vw;
+}
+
+#project-breakdown{
+    position: relative;
+    left: 25%;
+    top: 55vh;
+    width: 50vw;
+    background-color: rgb(216 216 216 / 33%);
+    padding: 2vw;
+    border-radius: 20px;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(30px); /* Slight downward translation for a smooth effect */
+    transition: opacity 2s ease, transform 1s ease-in; /* Smooth transition */
+}
+
+#project-breakdown.visible {
+    opacity: 1; /* Fade to full opacity */
+    transform: translateY(0); /* Reset to original position */
+}
+
+#scroll-thing{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-top: 10vh;
+}

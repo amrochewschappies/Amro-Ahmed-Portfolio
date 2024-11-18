@@ -1,12 +1,12 @@
 // Array to hold navigation page details with names and links
 const navPages = [
-    {name: "Home" , href: '/Amro-s-Ecommerce-Website/Home/Home.html'},
-    {name: "Gallery" , href: '/Amro-s-Ecommerce-Website/Gallery/Gallery.html'}
+    {name: "Projects" , href: '/Amro-s-Ecommerce-Website/Home/Home.html'},
+    {name: "About Me" , href: '/Amro-s-Ecommerce-Website/Gallery/Gallery.html'}
 ];
 
 // Function to load the navbar based on the current page name
 export function loadNavbar(CurrentPageName){
-    const nav = document.querySelector("header > nav"); // Get the nav element in the header
+    const nav = document.querySelector("#nav-bar"); // Get the nav element in the header
     const ul = document.createElement("ul"); // Create a new unordered list for nav items
 
     // Loop through each page in the navPages array
@@ -31,3 +31,15 @@ export function loadNavbar(CurrentPageName){
     }
     nav.appendChild(ul); // Finally, append the ul to the nav element
 }
+
+
+const burgerMenu = document.getElementById("burger-menu");
+const navBar = document.getElementById("nav-bar");
+
+burgerMenu.addEventListener("mouseenter", () => {
+  navBar.style.opacity = "1";
+});
+
+burgerMenu.addEventListener("mouseleave", () => {
+  navBar.style.opacity = "0";
+});

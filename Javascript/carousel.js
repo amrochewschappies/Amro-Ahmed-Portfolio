@@ -1,4 +1,4 @@
-const previews = ["./Images/Mlungisi Logo.png", "./Images/Ferrari image.jpg", "../Images/IMG_9133.PNG"];
+const previews = ["./Images/Mlungisi Logo.png", "./Images/Ferrari image.jpg", "./Images/placeholder.png"];
 let carouselDots = [];
 const dotContainer = document.querySelector("#carousel-dots");
 const image = document.querySelector("#preview-image");
@@ -31,7 +31,7 @@ carouselDots.forEach(dot => {
 carouselDots.forEach(dot => {
     dot.addEventListener("mouseenter", function(){
         if (carouselDots[currentIndex] != dot){
-            dot.style.backgroundColor = "yellow";
+            dot.style.backgroundColor = "black";
             dot.style.width = "22%";
             dot.style.height = "37%";
         }
@@ -66,7 +66,7 @@ carouselDots.forEach((dot, index) => {
         carouselDots[currentIndex].style.width = "17%";
         carouselDots[currentIndex].style.height = "30%";
         carouselDots[currentIndex].style.backgroundColor = "black";
-        image.src = previews[currentIndex];
+        changeImage(previews[currentIndex]);
     });
 });
 
@@ -105,7 +105,7 @@ previousButton.addEventListener("click", function(){
     carouselDots[currentIndex].style.width = "17%";
     carouselDots[currentIndex].style.height = "30%";
     carouselDots[currentIndex].style.backgroundColor = "black";
-    image.src = previews[currentIndex];
+    changeImage(previews[currentIndex]);
 })
 
 nextButton.addEventListener("click", function(){
@@ -123,5 +123,20 @@ nextButton.addEventListener("click", function(){
     carouselDots[currentIndex].style.width = "17%";
     carouselDots[currentIndex].style.height = "30%";
     carouselDots[currentIndex].style.backgroundColor = "black";
-    image.src = previews[currentIndex];
+    changeImage(previews[currentIndex]);
 })
+
+function changeImage(newSrc) {
+    // Fade out the current image
+    image.style.opacity = 0;
+
+    // Once the image has faded out, change the source
+    setTimeout(() => {
+        image.src = newSrc;
+
+        // After a slight delay (same as transition time), fade in the new image
+        setTimeout(() => {
+            image.style.opacity = 1;
+        }, 50); // small delay to ensure the src change is complete before fading in
+    }, 500); // 500ms to match the fade-out duration
+}
