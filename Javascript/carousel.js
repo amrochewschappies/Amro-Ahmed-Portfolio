@@ -1,10 +1,12 @@
 const previews = ["./Images/Mlungisi Logo.png", "./Images/Ferrari image.jpg", "./Images/placeholder.png"];
+const pages = ["./Mlungisi Foundation/Mlungisi-Foundation.html", "./Ferrari Website/Ferrari-Website.html", "./"];
 let carouselDots = [];
 const dotContainer = document.querySelector("#carousel-dots");
 const image = document.querySelector("#preview-image");
 const previousButton = document.querySelector("#previous-button");
 const nextButton = document.querySelector("#next-button");
 let currentIndex = 0;
+const openText = document.querySelector("#target-text");
 
 previews.forEach(item => {
     createDot();
@@ -140,3 +142,97 @@ function changeImage(newSrc) {
         }, 50); // small delay to ensure the src change is complete before fading in
     }, 500); // 500ms to match the fade-out duration
 }
+
+
+image.addEventListener("mouseover", function(){
+    image.style.filter = "blur(5px)";
+    openText.style.opacity = "1"; 
+    resolver.resolve(options, callback);
+})
+
+image.addEventListener("mouseleave", function(){
+    image.style.filter = "blur(0px)";
+    openText.style.opacity = "0";
+})
+
+image.addEventListener("click", function(){
+    window.location.href = pages[currentIndex];
+})
+
+const resolver = {
+    resolve: function resolve(options, callback) {
+      const resolveString = options.resolveString || options.element.textContent; // Use textContent from the element
+      const combinedOptions = Object.assign({}, options, {resolveString: resolveString});
+      
+      function getRandomInteger(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+  
+      function randomCharacter(characters) {
+        return characters[getRandomInteger(0, characters.length - 1)];
+      }
+  
+      function doRandomiserEffect(options, callback) {
+        const characters = options.characters;
+        const timeout = options.timeout;
+        const element = options.element;
+        const partialString = options.partialString;
+  
+        let iterations = options.iterations;
+  
+        setTimeout(() => {
+          if (iterations >= 0) {
+            const nextOptions = Object.assign({}, options, {iterations: iterations - 1});
+  
+            if (iterations === 0) {
+              element.textContent = partialString;
+            } else {
+              element.textContent = partialString.substring(0, partialString.length - 1) + randomCharacter(characters);
+            }
+  
+            doRandomiserEffect(nextOptions, callback);
+          } else if (typeof callback === "function") {
+            callback(); 
+          }
+        }, options.timeout);
+      }
+  
+      function doResolverEffect(options, callback) {
+        const resolveString = options.resolveString;
+        const characters = options.characters;
+        const offset = options.offset;
+        const partialString = resolveString.substring(0, offset);
+        const combinedOptions = Object.assign({}, options, {partialString: partialString});
+  
+        doRandomiserEffect(combinedOptions, () => {
+          const nextOptions = Object.assign({}, options, {offset: offset + 1});
+  
+          if (offset < resolveString.length) { 
+            doResolverEffect(nextOptions, callback);
+          } else if (typeof callback === "function") {
+            callback();
+          }
+        });
+      }
+  
+      doResolverEffect(combinedOptions, callback);
+    } 
+  }
+  
+  const targetElement = document.querySelector('[data-target-resolver]');
+  
+  const options = {
+    offset: 0,                
+    timeout: 5,                
+    iterations: 4,              
+    characters: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'],
+    resolveString: targetElement.textContent,
+    element: targetElement       
+  }
+  
+  function callback() {
+    console.log('Text resolved!');
+  }
+  
+
+  

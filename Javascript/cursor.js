@@ -43,7 +43,6 @@ function updateCursor() {
     // Apply hover effect scale if hovering over the image
     if (isHoveringImage) {
       scale *= 2.5;  
-      cursorCircles[i].setAttribute('fill', 'red');
     }
 
     cursorCircles[i].style.transform = `translate(${current.x}px, ${current.y}px) scale(${scale})`;
@@ -56,14 +55,3 @@ document.addEventListener('mousemove', onMouseMove, false);
 
 initCursor();
 updateCursor();
-
-// Event listeners for hover on the image
-const previewImage = document.querySelector('#preview-image');
-
-previewImage.addEventListener('mouseenter', function() {
-  isHoveringImage = true;  
-});
-
-previewImage.addEventListener('mouseleave', function() {
-  isHoveringImage = false; 
-});

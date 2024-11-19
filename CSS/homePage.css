@@ -5,7 +5,7 @@ body {
 main {
     overflow-y: scroll;
     overflow-x: hidden;
-    height: 86vh;
+    height: 85vh;
     margin-bottom: 0;
     padding-bottom: 0;
 }
@@ -142,7 +142,7 @@ main {
 
 #project-display {
     width: 50%;
-    height: 25vw;
+    height: 24.88vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -164,7 +164,7 @@ main {
     aspect-ratio: 16 / 9;
     padding-top: 2%;
     border-radius: 29px;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease, filter 0.5s ease;
 }
 
 footer{
@@ -179,4 +179,16 @@ footer{
     padding-top: 0.5%;
     width: 5%;
     background: pink;
+}
+
+#target-text{
+    position: absolute;
+    z-index: 1000;
+    top: 20vh;
+    font-size: 3vw;
+    font-weight: 500;
+    transition: all 0.5s ease;
+    pointer-events: none;
+    margin: 0;
+    padding: 0;
 }
