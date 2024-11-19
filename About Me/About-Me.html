@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><link rel="stylesheet" href="../CSS/homePage.css">
+    <script type="module"> import { loadNavbar } from "../JavaScript/navigationBar.js"
+        loadNavbar("About Me")
+    </script>
+    <link rel="stylesheet" href="../CSS/navigationBar.css">
+    <link rel="stylesheet" href="../CSS/generalStyling.css">
+    <link rel="stylesheet" href="../CSS/projectDisplay.css">
+    <script src="../Javascript/cursor.js" defer></script>
+    <script src="../Javascript/projectDisplay.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div id="name-section">
+            <h1 id="name-logo">Amro Ahmed</h1>
+        </div>
+        <div id="burger-menu">
+            <svg id="burger-svg" width="120" height="120" viewBox="0 0 84 84" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g id="Frame 1">
+                    <line id="bottom-line" x1="20" y1="35.5" x2="54" y2="35.5" />
+                    <line id="top-line" x1="20" y1="46.5" x2="54" y2="46.5" />
+                </g>
+            </svg>
+            <nav id="nav-bar">
+
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+        <svg xmlns="http://www.w3.org/2000/svg" class="goo" version="1.1" width="100%">
+            <defs>
+                <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur"></feGaussianBlur>
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 35 -15"
+                        result="goo"></feColorMatrix>
+                    <feComposite in="SourceGraphic" in2="goo" operator="atop"></feComposite>
+                </filter>
+            </defs>
+        </svg>
+
+        <div id="cursor"></div>
+</body>
+</html>

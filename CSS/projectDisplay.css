@@ -14,14 +14,16 @@
     flex-basis: 200;
 }
 
-.project-image{
-    width: 80%;
-    aspect-ratio: 16 / 9;
-    padding: 2vh 2vw 2vh 2vw;
+#visual-display {
+    position: relative;
+    top: 12vh;
+    left: 15vw;
 }
+
 
 .project-description{
     padding-left: 2vw;
+    padding-right: 3vw;
     display: flex;
     flex-direction: column;
 }
@@ -33,23 +35,22 @@
     flex-wrap: wrap;
     gap: 2vw;
     position: relative;
-    top: 20vh;
 }
 
 .project-property{
-    width: 12vw;
+    width: 13vw;
 }
 
 #project-breakdown{
     position: relative;
     left: 25%;
-    top: 55vh;
+    top: 18vh;
     width: 50vw;
     background-color: rgb(216 216 216 / 33%);
     padding: 2vw;
     border-radius: 20px;
     opacity: 0; /* Initially hidden */
-    transform: translateY(30px); /* Slight downward translation for a smooth effect */
+    transform: translateY(30%); /* Slight downward translation for a smooth effect */
     transition: opacity 2s ease, transform 1s ease-in; /* Smooth transition */
 }
 
@@ -58,9 +59,16 @@
     transform: translateY(0); /* Reset to original position */
 }
 
-#scroll-thing{
+#scroll-text{
     display: flex;
     justify-content: center;
     position: relative;
     padding-top: 10vh;
+    transition: all 0.5s ease;
+}
+
+#project-heading{
+    font-size: 8vw;
+    margin-bottom: 0;
+    margin-top: 0;
 }

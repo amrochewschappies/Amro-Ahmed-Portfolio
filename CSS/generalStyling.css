@@ -14,8 +14,13 @@
 
 body{
     background-color: #e6e6e6;
-    cursor: none;  
+    cursor: none; 
     margin-top: 0;
+}
+
+#cursor-circle{
+  width: 100%;
+  height: 100%;
 }
 
 :root {
