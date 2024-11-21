@@ -1,13 +1,24 @@
 body {
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 main {
     overflow-y: scroll;
     overflow-x: hidden;
+    width: 70vw;
     height: 85vh;
     margin-bottom: 0;
     padding-bottom: 0;
+    position: relative;
+    left: 29vw;
+}
+
+aside{
+    width: 28vw;
+    height: 65vh;
+    position: relative;
+    bottom: 82vh;
+    border: solid;
 }
 
 #main-heading {
@@ -79,7 +90,7 @@ main {
     display: flex;               
     justify-content: space-between; 
     align-items: center;           
-    width: 90vw;                   
+    width: 60vw;                   
     margin: 0 auto;               
     padding: 0 5%;         
     position: relative;
@@ -169,16 +180,18 @@ main {
 
 footer{
     border-top: solid;
-    height: 15%;
+    height: 11vh;
     width: 100%;
     position: relative;
-    top: 5vh;
+    bottom: 75vh;
+    z-index: 21222;
 }
 
 .icon-image{
     padding-top: 0.5%;
-    width: 5%;
-    background: pink;
+    width: 2vw;
+    height: 5vh;
+    aspect-ratio: 16/9;
 }
 
 #target-text{
@@ -191,4 +204,13 @@ footer{
     pointer-events: none;
     margin: 0;
     padding: 0;
+    opacity: 0;
+}
+
+#socials-section{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
 }
