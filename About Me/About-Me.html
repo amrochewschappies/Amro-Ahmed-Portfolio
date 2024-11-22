@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title><link rel="stylesheet" href="../CSS/homePage.css">
+    <title>Document</title>
     <script type="module"> import { loadNavbar } from "../JavaScript/navigationBar.js"
         loadNavbar("About Me")
     </script>
     <link rel="stylesheet" href="../CSS/navigationBar.css">
     <link rel="stylesheet" href="../CSS/generalStyling.css">
-    <link rel="stylesheet" href="../CSS/projectDisplay.css">
+    <link rel="stylesheet" href="../CSS/aboutMe.css">
     <script src="../Javascript/cursor.js" defer></script>
-    <script src="../Javascript/projectDisplay.js" defer></script>
 </head>
 
 <body>
@@ -32,6 +32,7 @@
             </nav>
 
         </div>
+
     </header>
 
     <main>
@@ -47,5 +48,31 @@
         </svg>
 
         <div id="cursor"></div>
+        <section id="about-me-section">
+            <h1 id="name-heading">Amro Ahmed</h1>
+            <img src="../Images/Me.png" alt="Picture of Amro Ahmed" id="my-photo">
+            <p id="about-me">
+                is a third year Digital Arts learner at the University of Witwatersrand with a major in interactive media and game design.
+            </p>
+            <div id="abilities-container">
+                <div id="heading">
+                    He specializes in interactive web experiences
+                </div>
+                <div id="wrapper">
+                    <div class="abilities">
+                        3D enhanced websites
+                    </div>
+                    <div class="abilities">
+                        Immersive experiences
+                    </div>
+                    <div class="abilities">
+                        Gamefied websites
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
 </body>
+
 </html>

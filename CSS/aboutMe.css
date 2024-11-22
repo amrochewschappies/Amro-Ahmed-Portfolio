@@ -1,0 +1,37 @@
+#my-photo{
+    width: 55vw;
+    aspect-ratio: 600 / 536;
+    position: relative;
+    bottom: 8vh;
+    right: 6vw;
+}
+
+body{
+    overflow: hidden;
+}
+
+#name-heading{
+    font-size: 8vw;
+    width: 40vw;
+    height: auto;
+    position: absolute;
+    left: 39vw;
+    top: -8vh;
+}
+
+#about-me{
+    position: absolute;
+    left: 39vw;
+    font-size: 2vw;
+    top: 50vh;
+    width: 45vw;
+}
+
+#abilities-container{
+    position: absolute;
+    left: 39vw;
+    font-size: 2vw;
+    top: 67vh;
+    border-top: solid;
+    padding-top: 2vh;
+}
