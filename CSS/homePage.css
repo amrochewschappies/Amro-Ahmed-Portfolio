@@ -5,20 +5,11 @@ body {
 main {
     overflow-y: scroll;
     overflow-x: hidden;
-    width: 70vw;
-    height: 85vh;
+    width: 100vw;
+    height: 78vh;
     margin-bottom: 0;
     padding-bottom: 0;
     position: relative;
-    left: 29vw;
-}
-
-aside{
-    width: 28vw;
-    height: 65vh;
-    position: relative;
-    bottom: 82vh;
-    border: solid;
 }
 
 #main-heading {
@@ -183,8 +174,6 @@ footer{
     height: 11vh;
     width: 100%;
     position: relative;
-    bottom: 75vh;
-    z-index: 21222;
 }
 
 .icon-image{
@@ -199,12 +188,13 @@ footer{
     z-index: 1000;
     top: 20vh;
     font-size: 3vw;
-    font-weight: 500;
+    font-weight: 700;
     transition: all 0.5s ease;
     pointer-events: none;
     margin: 0;
     padding: 0;
     opacity: 0;
+    color: white;
 }
 
 #socials-section{

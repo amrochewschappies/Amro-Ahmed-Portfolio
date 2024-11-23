@@ -30,8 +30,8 @@ body{
 #abilities-container{
     position: absolute;
     left: 39vw;
-    font-size: 2vw;
-    top: 67vh;
+    font-size: 1.4vw;
+    top: 75vh;
     border-top: solid;
     padding-top: 2vh;
 }

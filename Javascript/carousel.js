@@ -1,4 +1,4 @@
-const previews = ["./Images/Mlungisi Logo.png", "./Images/Ferrari image.jpg", "./Images/placeholder.png"];
+const previews = ["./Images/Mlungisi Logo.png", "./Images/Ferrari Symbol.png", "./Images/Trigger Tempo.png", "./Images/Prop Hunt.png", "./Images/Smash Botato.png"];
 const pages = ["./Mlungisi Foundation/Mlungisi-Foundation.html", "./Ferrari Website/Ferrari-Website.html", "./"];
 let carouselDots = [];
 const dotContainer = document.querySelector("#carousel-dots");
