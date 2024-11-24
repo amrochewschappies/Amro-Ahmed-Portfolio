@@ -65,8 +65,16 @@ if (pageName != "index.html"){
   })
   nameIcon.addEventListener("mouseenter", function(){
     nameIcon.style.fontSize = "2.2vw";
+    let circles = document.querySelectorAll(".cursor-circle");
+    circles.forEach(circle => {
+      circle.style.background = "orange";
+    });
   })
   nameIcon.addEventListener("mouseleave", function(){
     nameIcon.style.fontSize = "2vw";
+    let circles = document.querySelectorAll(".cursor-circle");
+    circles.forEach(circle => {
+      circle.style.background = "white";
+    });
   })
 }

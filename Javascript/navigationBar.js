@@ -38,8 +38,16 @@ const navBar = document.getElementById("nav-bar");
 
 burgerMenu.addEventListener("mouseenter", () => {
   navBar.style.opacity = "1";
+  let circles = document.querySelectorAll(".cursor-circle");
+    circles.forEach(circle => {
+      circle.style.background = "orange";
+    });
 });
 
 burgerMenu.addEventListener("mouseleave", () => {
   navBar.style.opacity = "0";
+  let circles = document.querySelectorAll(".cursor-circle");
+    circles.forEach(circle => {
+      circle.style.background = "white";
+    });
 });

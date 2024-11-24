@@ -37,6 +37,10 @@ carouselDots.forEach(dot => {
             dot.style.width = "22%";
             dot.style.height = "37%";
         }
+        let circles = document.querySelectorAll(".cursor-circle");
+        circles.forEach(circle => {
+        circle.style.background = "orange";
+      });
     })
 });
 
@@ -52,6 +56,10 @@ carouselDots.forEach(dot => {
             dot.style.width = "17%";
             dot.style.height = "30%";
         }
+        let circles = document.querySelectorAll(".cursor-circle");
+        circles.forEach(circle => {
+        circle.style.background = "whites";
+      });
     })
 });
 
@@ -75,21 +83,37 @@ carouselDots.forEach((dot, index) => {
 previousButton.addEventListener("mouseenter", function(){
     let text = previousButton.querySelector("#previous-text");
     text.innerText = "";
+    let circles = document.querySelectorAll(".cursor-circle");
+    circles.forEach(circle => {
+      circle.style.background = "orange";
+    });
 })
 
 previousButton.addEventListener("mouseleave", function(){
     let text = previousButton.querySelector("#previous-text");
     text.innerText = "Previous Project";
+    let circles = document.querySelectorAll(".cursor-circle");
+    circles.forEach(circle => {
+      circle.style.background = "white";
+    });
 })
 
 nextButton.addEventListener("mouseenter", function(){
     let text = nextButton.querySelector("#next-text");
     text.innerText = "";
+    let circles = document.querySelectorAll(".cursor-circle");
+    circles.forEach(circle => {
+      circle.style.background = "orange";
+    });
 })
 
 nextButton.addEventListener("mouseleave", function(){
     let text = nextButton.querySelector("#next-text");
     text.innerText = "Next Project";
+    let circles = document.querySelectorAll(".cursor-circle");
+    circles.forEach(circle => {
+      circle.style.background = "white";
+    });
 })
 
 previousButton.addEventListener("click", function(){
@@ -143,93 +167,24 @@ function changeImage(newSrc) {
 
 image.addEventListener("mouseover", function(){
     image.style.filter = "blur(5px)";
-    openText.style.opacity = "1"; 
-    resolver.resolve(options, callback);
+    let circles = document.querySelectorAll(".cursor-circle");
+    circles.forEach(circle => {
+      circle.style.background = "orange";
+    });
 })
 
 image.addEventListener("mouseleave", function(){
     image.style.filter = "blur(0px)";
-    openText.style.opacity = "0";
+    let circles = document.querySelectorAll(".cursor-circle");
+    circles.forEach(circle => {
+      circle.style.background = "white";
+    });
 })
 
 image.addEventListener("click", function(){
     window.location.href = pages[currentIndex];
 })
 
-const resolver = {
-    resolve: function resolve(options, callback) {
-      const resolveString = options.resolveString || options.element.textContent;
-      const combinedOptions = Object.assign({}, options, {resolveString: resolveString});
-      
-      function getRandomInteger(min, max) {
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-      }
-  
-      function randomCharacter(characters) {
-        return characters[getRandomInteger(0, characters.length - 1)];
-      }
-  
-      function doRandomiserEffect(options, callback) {
-        const characters = options.characters;
-        const timeout = options.timeout;
-        const element = options.element;
-        const partialString = options.partialString;
-  
-        let iterations = options.iterations;
-  
-        setTimeout(() => {
-          if (iterations >= 0) {
-            const nextOptions = Object.assign({}, options, {iterations: iterations - 1});
-  
-            if (iterations === 0) {
-              element.textContent = partialString;
-            } else {
-              element.textContent = partialString.substring(0, partialString.length - 1) + randomCharacter(characters);
-            }
-  
-            doRandomiserEffect(nextOptions, callback);
-          } else if (typeof callback === "function") {
-            callback(); 
-          }
-        }, options.timeout);
-      }
-  
-      function doResolverEffect(options, callback) {
-        const resolveString = options.resolveString;
-        const characters = options.characters;
-        const offset = options.offset;
-        const partialString = resolveString.substring(0, offset);
-        const combinedOptions = Object.assign({}, options, {partialString: partialString});
-  
-        doRandomiserEffect(combinedOptions, () => {
-          const nextOptions = Object.assign({}, options, {offset: offset + 1});
-  
-          if (offset < resolveString.length) { 
-            doResolverEffect(nextOptions, callback);
-          } else if (typeof callback === "function") {
-            callback();
-          }
-        });
-      }
-  
-      doResolverEffect(combinedOptions, callback);
-    } 
-  }
-  
-  const targetElement = document.querySelector('[data-target-resolver]');
-  
-  const options = {
-    offset: 0,                
-    timeout: 5,                
-    iterations: 4,              
-    characters: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'],
-    resolveString: targetElement.textContent,
-    element: targetElement       
-  }
-  
-  function callback() {
-    console.log('Text resolved!');
-  }
   
 
   const linkdinButton = document.querySelector("#linkdin-icon");
@@ -266,4 +221,21 @@ const resolver = {
   });
   emailButton.addEventListener("mouseleave", function(){
     emailButton.style.width = "1vw"; 
+  });
+
+
+  const icons = document.querySelectorAll(".icons");
+  icons.forEach(icon => {
+    icon.addEventListener("mouseenter", function(){
+        let circles = document.querySelectorAll(".cursor-circle");
+        circles.forEach(circle => {
+        circle.style.background = "orange";
+      });
+    })
+    icon.addEventListener("mouseleave", function(){
+      let circles = document.querySelectorAll(".cursor-circle");
+      circles.forEach(circle => {
+      circle.style.background = "white";
+    });
+  })
   });

@@ -6,17 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amro Ahmed</title>
     <link rel="stylesheet" href="./CSS/homePage.css">
-    <script type="module"> import { loadNavbar } from "../JavaScript/navigationBar.js"
+    <script type="module"> import { loadNavbar } from "./JavaScript/navigationBar.js"
         loadNavbar("Projects")
     </script>
     <link rel="stylesheet" href="./CSS/navigationBar.css">
     <link rel="stylesheet" href="./CSS/generalStyling.css">
     <script src="./Javascript/cursor.js" defer></script>
     <script src="./Javascript/carousel.js" defer></script>
+    <script src="./Javascript/landingAnimtion.js" defer></script>
     <link rel="icon" href="./Images/Website Logo.png" type="image/x-icon">
 </head>
 
 <body>
+    <div id="loading-screen">
+        <div id="progress-container">
+          <div id="progress-bar"></div>
+          <span id="percentage-text">0%</span>
+        </div>
+        <svg id="signature-svg" width="246" height="66" viewBox="0 0 246 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path id="signature" d="M12.8 65C13.4002 58.9985 16.3231 52.1868 19.7333 47.3556C27.3342 36.5877 35.9057 24.566 46.3111 16.2889C51.9265 11.8222 60.1615 6.22281 65.9111 13.8889C72.3247 22.4404 72.9706 36.4123 72.0444 46.6C71.7868 49.434 70.787 58.1497 73.7778 59.8445C77.6018 62.0114 89.0454 52.8111 91.9111 51.3111C105.395 44.2534 118.204 50.5111 132.267 50.5111C140.488 50.5111 148.827 46.9 156.178 43.5778C160.103 41.804 171.831 39.2477 173.022 34.2444C174.505 28.018 150.555 25.4159 147.733 25.1778C116.097 22.5084 85.5015 29.2012 54.7556 35.4C42.5437 37.8621 30.3078 40.2231 18.1334 42.8667C13.1988 43.9382 8.00908 45.8 2.8889 45.8C-0.296608 45.8 3.42277 44.9154 4.44445 44.6445C29.8958 37.8949 56.0592 33.391 81.8667 28.2445C119.393 20.7608 156.759 12.402 194.489 5.97779C210.859 3.19047 228.173 -0.416926 244.8 1.80002" stroke="black" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+      </div>
+
     <header>
         <div id="name-section">
             <h1 id="name-logo">Amro Ahmed</h1>
@@ -51,11 +62,11 @@
 
         <section id="hero-section">
             <div id="project-display">
-                <div data-target-resolver="true" id="target-text">Open Project</div>
                 <img src="./Images/Ferrari Symbol.png" alt="Preview image of the project" id="preview-image">
                 <div id="carousel-dots">
 
                 </div>
+                <div id="instructions-text">Select a project to view it's details</div>
             </div>
             <div id="navigation-buttons">
 
