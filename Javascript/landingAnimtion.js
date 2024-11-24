@@ -4,10 +4,13 @@ const percentageText = document.getElementById('percentage-text');
 const signature = document.querySelector("#signature-svg");
 const progressContainer = document.querySelector("#progress-container");
 const main = document.querySelector("main");
+const footer = document.querySelector("footer");
 
 function updateProgress() {
   if (sessionStorage.getItem('progressCompleted')) {
     document.getElementById('loading-screen').style.display = 'none';
+    main.style.display = "block";
+    footer.style.display = "block";
     return; 
   }
   progress += 1;
@@ -30,6 +33,7 @@ function updateProgress() {
       setTimeout(function() {
         signature.style.display = 'none';
         main.style.display = "block";
+        footer.style.display = "block";
         document.getElementById('loading-screen').style.display = 'none'; 
       }, 2000);
     }, 1500); 
