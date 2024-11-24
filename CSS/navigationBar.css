@@ -84,6 +84,7 @@ header{
     font-family: sans-serif;
     text-transform: uppercase;
     user-select: none;
+    transition: all 0.2s ease;
 }
 
 #name-section{

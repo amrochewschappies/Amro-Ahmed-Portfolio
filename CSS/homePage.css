@@ -194,7 +194,12 @@ footer{
     margin: 0;
     padding: 0;
     opacity: 0;
-    color: white;
+    color: rgb(193, 193, 193);
+    text-shadow: 
+    2px 2px 0px rgba(0, 0, 0, 0.5), /* top-left shadow */
+    -2px -2px 0px rgba(0, 0, 0, 0.5), /* bottom-right shadow */
+    2px -2px 0px rgba(0, 0, 0, 0.5), /* bottom-left shadow */
+    -2px 2px 0px rgba(0, 0, 0, 0.5); /* top-right shadow */
 }
 
 #socials-section{
@@ -203,4 +208,8 @@ footer{
     justify-content: center;
     align-items: center;
     gap: 2vw;
+}
+
+.icons{
+    transition: all 0.3s ease;
 }

@@ -1,5 +1,5 @@
-const previews = ["./Images/Mlungisi Logo.png", "./Images/Ferrari Symbol.png", "./Images/Trigger Tempo.png", "./Images/Prop Hunt.png", "./Images/Smash Botato.png"];
-const pages = ["./Mlungisi Foundation/Mlungisi-Foundation.html", "./Ferrari Website/Ferrari-Website.html", "./"];
+const previews = ["./Images/Ferrari Symbol.png", "./Images/Mlungisi Logo.png", "./Images/Trigger Tempo.png", "./Images/Bullets Hurt.png", "./Images/Smash Botato.png", "./Images/Prop Hunt.png"];
+const pages = ["./Ferrari Website/Ferrari-Website.html", "./Mlungisi Foundation/Mlungisi-Foundation.html", "./Tempo Trigger/Tempo-Trigger.html", "./Bullets Hurt/Bullets-Hurt.html", "./Smash Botato/Smash-Botato.html", "./Hide And See-Bu/Hide-And-See-Bu.html"];
 let carouselDots = [];
 const dotContainer = document.querySelector("#carousel-dots");
 const image = document.querySelector("#preview-image");
@@ -129,18 +129,15 @@ nextButton.addEventListener("click", function(){
 })
 
 function changeImage(newSrc) {
-    // Fade out the current image
     image.style.opacity = 0;
 
-    // Once the image has faded out, change the source
     setTimeout(() => {
         image.src = newSrc;
 
-        // After a slight delay (same as transition time), fade in the new image
         setTimeout(() => {
             image.style.opacity = 1;
-        }, 50); // small delay to ensure the src change is complete before fading in
-    }, 500); // 500ms to match the fade-out duration
+        }, 50); 
+    }, 500); 
 }
 
 
@@ -161,7 +158,7 @@ image.addEventListener("click", function(){
 
 const resolver = {
     resolve: function resolve(options, callback) {
-      const resolveString = options.resolveString || options.element.textContent; // Use textContent from the element
+      const resolveString = options.resolveString || options.element.textContent;
       const combinedOptions = Object.assign({}, options, {resolveString: resolveString});
       
       function getRandomInteger(min, max) {
@@ -235,4 +232,38 @@ const resolver = {
   }
   
 
+  const linkdinButton = document.querySelector("#linkdin-icon");
+  linkdinButton.addEventListener("mouseenter", function(){
+    linkdinButton.style.width = "2vw";
+  })
+  linkdinButton.addEventListener("click", function(){
+    window.open('https://www.linkedin.com/in/amro-ahmd-851525335/', '_blank');
+    linkdinButton.style.width = "1vw";
+  })
+  linkdinButton.addEventListener("mouseleave", function(){
+    linkdinButton.style.width = "1vw";
+  })
   
+  const githubButton = document.querySelector("#github-icon");
+  githubButton.addEventListener("mouseenter", function(){
+    linkdinButton.style.width = "2vw";
+  })
+  githubButton.addEventListener("click", function(){
+    window.open('https://github.com/AmroWantsBums', '_blank');
+    linkdinButton.style.width = "1vw";
+  })
+  githubButton.addEventListener("mouseleave", function(){
+  })
+
+  const emailButton = document.querySelector("#email-icon");
+
+  emailButton.addEventListener("mouseenter", function(){
+    emailButton.style.width = "2vw"; 
+  });
+  emailButton.addEventListener("click", function(){
+    window.location.href = "mailto:amro4ahmed4@gmail.com"; 
+    emailButton.style.width = "1vw"; 
+  });
+  emailButton.addEventListener("mouseleave", function(){
+    emailButton.style.width = "1vw"; 
+  });

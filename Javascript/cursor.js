@@ -55,3 +55,18 @@ document.addEventListener('mousemove', onMouseMove, false);
 
 initCursor();
 updateCursor();
+
+let currentUrl = window.location.href;
+let pageName = currentUrl.substring(currentUrl.lastIndexOf('/') + 1);
+const nameIcon = document.querySelector("#name-logo");
+if (pageName != "index.html"){
+  nameIcon.addEventListener("click", function(){
+    window.location.href = "../index.html";
+  })
+  nameIcon.addEventListener("mouseenter", function(){
+    nameIcon.style.fontSize = "2.2vw";
+  })
+  nameIcon.addEventListener("mouseleave", function(){
+    nameIcon.style.fontSize = "2vw";
+  })
+}

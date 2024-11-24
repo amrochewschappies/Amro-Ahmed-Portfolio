@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amro Ahmed</title>
+    <link rel="stylesheet" href="../CSS/homePage.css">
+    <script type="module"> import { loadNavbar } from "../JavaScript/navigationBar.js"
+        loadNavbar("Home")
+    </script>
+    <link rel="stylesheet" href="../CSS/navigationBar.css">
+    <link rel="stylesheet" href="../CSS/generalStyling.css">
+    <link rel="stylesheet" href="../CSS/projectDisplay.css">
+    <script src="../Javascript/cursor.js" defer></script>
+    <script src="../Javascript/projectDisplay.js" defer></script>
+    <link rel="icon" href="./Images/Website Logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div id="name-section">
+            <h1 id="name-logo">Amro Ahmed</h1>
+        </div>
+        <div id="burger-menu">
+            <svg id="burger-svg" width="120" height="120" viewBox="0 0 84 84" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g id="Frame 1">
+                    <line id="bottom-line" x1="20" y1="35.5" x2="54" y2="35.5" />
+                    <line id="top-line" x1="20" y1="46.5" x2="54" y2="46.5" />
+                </g>
+            </svg>
+            <nav id="nav-bar">
+
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+        <svg xmlns="http://www.w3.org/2000/svg" class="goo" version="1.1" width="100%">
+            <defs>
+                <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur"></feGaussianBlur>
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 35 -15"
+                        result="goo"></feColorMatrix>
+                    <feComposite in="SourceGraphic" in2="goo" operator="atop"></feComposite>
+                </filter>
+            </defs>
+        </svg>
+
+        <div id="cursor"></div>
+
+        <section class="project-container">
+            <div class="project-overview">
+                <div class="item">
+                    <svg id="visual-display" viewBox="0 0 200 200" width="200" height="200">
+                        <circle id="circle" cx="100" cy="100" r="30" fill="rgb(32, 31, 31)" />
+                    </svg>
+
+                </div>
+                <div class="project-description item">
+                    <h1 id="project-heading">Bullets Hurt</h1>
+                    <p>
+                        A Western-themed multiplayer duel game where players face off in tense standoffs, using crates
+                        and dynamic props for cover to outdraw their opponent and prove they're the fastest gun in the
+                        West.
+                    </p>
+                    <div class="project-properties">
+                        <div id="project-role" class="project-property">Role: <br> Game Developer</div>
+                        <div id="project-type" class="project-property">Type: <br> Non Goverment Organization</div>
+                        <div id="project-date" class="project-property">Date: <br> 2024-</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="scroll-text">
+                Scroll
+            </div>
+            <div id="project-breakdown">
+                <h1 id="breakdown-heading">Project Breakdown</h1>
+                <p>
+                    Step into the boots of a sharpshooter in this Western-themed multiplayer duel game. Players begin
+                    each showdown by walking away from their opponent, separated by a central barrier that adds to the
+                    suspense of the classic standoff. With the arena designed symmetrically, each side features three
+                    crates strategically placed for cover, encouraging tactical decision-making and quick reflexes.
+                </p>
+                <p>
+                    Adding to the dynamic gameplay, iconic Western props—such as tumbleweeds and rolling
+                    barrels—occasionally traverse the battlefield. These objects not only amplify the immersive setting
+                    but can also serve as improvised cover, challenging players to adapt their strategies on the fly.
+                    The tension builds as players carefully time their movements, calculate their shots, and aim to
+                    outdraw their rival in a heart-pounding duel.
+                </p>
+                <p>
+                    This game captures the essence of Wild West standoffs with a balance of precision, timing, and
+                    tactical play. With its blend of symmetrical design, dynamic elements, and immersive Western
+                    aesthetics, it offers a thrilling test of skill for players looking to prove their mettle in the
+                    ultimate face-off.
+                </p>
+                <button id="download-button" class="buttons" onclick="window.location.href='../Game Files/Bullets Hurt.zip'"><span>Download Game</span></button>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

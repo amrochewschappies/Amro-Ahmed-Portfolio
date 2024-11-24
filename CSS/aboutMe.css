@@ -35,3 +35,10 @@ body{
     border-top: solid;
     padding-top: 2vh;
 }
+
+#wrapper{
+    display: flex;
+    justify-content: center;
+    padding-top: 1vh;
+    gap: 2vw;
+}
