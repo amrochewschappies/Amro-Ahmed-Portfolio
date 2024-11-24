@@ -6,7 +6,7 @@ const progressContainer = document.querySelector("#progress-container");
 const main = document.querySelector("main");
 
 function updateProgress() {
-  if (sessionStorage.getItem('progrsessCompleted')) {
+  if (sessionStorage.getItem('progressCompleted')) {
     document.getElementById('loading-screen').style.display = 'none';
     return; 
   }
