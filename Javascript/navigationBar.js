@@ -1,7 +1,7 @@
 // Array to hold navigation page details with names and links
 const navPages = [
     {name: "Projects" , href: '/Amro-Ahmed-Portfolio/index.html'},
-    {name: "About Me" , href: '/Amro-Ahmed-Portfolio/About/About-Me.html'}
+    {name: "About Me" , href: '/Amro-Ahmed-Portfolio/About Me/About-Me.html'}
 ];
 
 // Function to load the navbar based on the current page name
