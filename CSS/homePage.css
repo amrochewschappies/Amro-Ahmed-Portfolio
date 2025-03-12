@@ -12,6 +12,15 @@ main {
     position: relative;
 }
 
+#project-display{
+    height: 100%;
+   }
+
+   #hero-section{
+    height: 80%;
+    width: 100%;
+   }
+
 #main-heading {
     font-size: 12vw;
     color: #000000;
@@ -331,4 +340,50 @@ footer{
         transform: translateY(0);
         opacity: 1;
     }
+}
+
+@media screen and (max-width: 400px) {
+   main{
+        width: 99vw;
+   }
+
+   #project-display{
+    height: 100%;
+   }
+
+   #hero-section{
+    height: 80%;
+   }
+
+   #carousel-dots{
+    display: none;
+   }
+
+   #instructions-text{
+    font-size: 3vw;
+   }
+
+   #previous-text{
+    font-size: 12px;
+   }
+
+   #next-text{
+    font-size: 12px;
+   }
+
+   #left-arrow,
+    #right-arrow {
+        width: 80%;
+        transition: transform 0.5s ease;  
+    }
+
+    #next-button{
+        position: relative;
+        right: 52px;
+    }
+
+    #next-text{
+        padding-left: 5px;
+    }
+
 }

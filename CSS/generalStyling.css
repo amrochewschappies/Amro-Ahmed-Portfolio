@@ -61,8 +61,8 @@ body{
             
   #burger-svg{
     position: absolute;
-    top: -23%;
-    left: 91%;
+    top: -28px;
+    left: 92%;
   }
 
   #top-line, #bottom-line{
@@ -82,4 +82,16 @@ body{
   #nav-bar{
     transition: opacity 0.5s ease;
     opacity: 0;
+  }
+
+  @media screen and (max-width: 400px) {
+    #cursor{
+      display: none;
+    }
+
+    #burger-svg{
+      position: absolute;
+      top: -28px;
+      left: 72%;
+    }
   }

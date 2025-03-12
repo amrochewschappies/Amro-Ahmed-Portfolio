@@ -93,3 +93,16 @@ header{
     margin-right: 2vw;
     margin: 0vh 2vw 0 0.4vw;
 }
+
+@media screen and (max-width: 400px) {  
+    #name-section{
+        padding-top: 5%;
+        width: 80%;
+        margin-right: 2vw;
+        margin: 0vh 2vw 0 0.4vw;
+    }
+
+    #name-logo{
+        font-size: 4vw;
+    }
+}
