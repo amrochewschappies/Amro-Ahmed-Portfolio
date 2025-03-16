@@ -251,7 +251,6 @@ footer{
     position: relative;
     width: 20%;
     height: 3vh;
-    background-color: #ddd;
     border-radius: 25px;
     overflow: hidden;
   }
@@ -342,7 +341,7 @@ footer{
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
    main{
         width: 99vw;
    }
