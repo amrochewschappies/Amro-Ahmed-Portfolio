@@ -81,39 +81,47 @@ carouselDots.forEach((dot, index) => {
 });
 
 previousButton.addEventListener("mouseenter", function(){
-    let text = previousButton.querySelector("#previous-text");
-    text.innerText = "";
-    let circles = document.querySelectorAll(".cursor-circle");
-    circles.forEach(circle => {
-      circle.style.background = "orange";
-    });
+    if (window.innerWidth > 500){
+      let text = previousButton.querySelector("#previous-text");
+      text.innerText = "";
+      let circles = document.querySelectorAll(".cursor-circle");
+      circles.forEach(circle => {
+        circle.style.background = "orange";
+      });
+    }
 })
 
 previousButton.addEventListener("mouseleave", function(){
-    let text = previousButton.querySelector("#previous-text");
-    text.innerText = "Previous Project";
-    let circles = document.querySelectorAll(".cursor-circle");
-    circles.forEach(circle => {
+    if (window.innerWidth > 500){
+      let text = previousButton.querySelector("#previous-text");
+      text.innerText = "Previous Project";
+      let circles = document.querySelectorAll(".cursor-circle");
+      circles.forEach(circle => {
       circle.style.background = "white";
     });
+  }
 })
 
 nextButton.addEventListener("mouseenter", function(){
-    let text = nextButton.querySelector("#next-text");
-    text.innerText = "";
-    let circles = document.querySelectorAll(".cursor-circle");
-    circles.forEach(circle => {
-      circle.style.background = "orange";
-    });
+    if (window.innerWidth > 500){
+      let text = nextButton.querySelector("#next-text");
+      text.innerText = "";
+      let circles = document.querySelectorAll(".cursor-circle");
+      circles.forEach(circle => {
+        circle.style.background = "orange";
+      });
+    }
 })
 
 nextButton.addEventListener("mouseleave", function(){
-    let text = nextButton.querySelector("#next-text");
-    text.innerText = "Next Project";
-    let circles = document.querySelectorAll(".cursor-circle");
-    circles.forEach(circle => {
-      circle.style.background = "white";
-    });
+    if (window.innerWidth > 500){
+      let text = nextButton.querySelector("#next-text");
+      text.innerText = "Next Project";
+      let circles = document.querySelectorAll(".cursor-circle");
+      circles.forEach(circle => {
+        circle.style.background = "white";
+      });
+    }
 })
 
 previousButton.addEventListener("click", function(){
@@ -153,14 +161,14 @@ nextButton.addEventListener("click", function(){
 })
 
 function changeImage(newSrc) {
+  
     image.style.opacity = 0;
 
-    setTimeout(() => {
-        image.src = newSrc;
-
+    setTimeout(() => { 
+      image.src = newSrc;
         setTimeout(() => {
             image.style.opacity = 1;
-        }, 50); 
+        }, 100); 
     }, 500); 
 }
 
@@ -188,39 +196,23 @@ image.addEventListener("click", function(){
   
 
   const linkdinButton = document.querySelector("#linkdin-icon");
-  linkdinButton.addEventListener("mouseenter", function(){
-    linkdinButton.style.width = "2vw";
-  })
+ 
   linkdinButton.addEventListener("click", function(){
     window.open('https://www.linkedin.com/in/amro-ahmd-851525335/', '_blank');
-    linkdinButton.style.width = "1vw";
-  })
-  linkdinButton.addEventListener("mouseleave", function(){
-    linkdinButton.style.width = "1vw";
   })
   
+  
   const githubButton = document.querySelector("#github-icon");
-  githubButton.addEventListener("mouseenter", function(){
-    linkdinButton.style.width = "2vw";
-  })
+  
   githubButton.addEventListener("click", function(){
-    window.open('https://github.com/AmroWantsBums', '_blank');
-    linkdinButton.style.width = "1vw";
-  })
-  githubButton.addEventListener("mouseleave", function(){
+    window.open('https://github.com/AmroChewsChappies', '_blank');
   })
 
   const emailButton = document.querySelector("#email-icon");
 
-  emailButton.addEventListener("mouseenter", function(){
-    emailButton.style.width = "2vw"; 
-  });
+ 
   emailButton.addEventListener("click", function(){
     window.location.href = "mailto:amro4ahmed4@gmail.com"; 
-    emailButton.style.width = "1vw"; 
-  });
-  emailButton.addEventListener("mouseleave", function(){
-    emailButton.style.width = "1vw"; 
   });
 
 

@@ -154,3 +154,55 @@
         opacity: 1;
     }
 }
+
+@media screen and (max-width: 500px) {  
+    #visual-display {
+        display: none;
+    }
+
+    .item{
+        width: 87vw;
+    }
+
+    .project-description{
+        display: block;
+    }
+
+    .project-properties{
+        gap: 21vw;
+        margin-top: 3vh;
+        padding-top: 2vh;
+    }
+
+    #project-breakdown{
+        left: 0;
+        width: 87vw;
+        top: 12vh;
+        height: auto;
+        padding: 2%;
+    }
+
+    #project-breakdown p{
+        font-size: 17px;
+    }
+
+    .unresponsive{
+        display: none;
+    }
+
+    #view-website-button{
+        width: 110px;
+    }
+
+    #view-website-button span{
+        font-size: 15px;
+    }
+
+    #work-with-us-button{
+        width: 110px;
+    }
+
+    #work-with-us-button span{
+        font-size: 15px;
+    }
+}

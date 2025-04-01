@@ -119,9 +119,8 @@ main {
     animation: loadFromRight 1s ease-out;
 }
 
-#previous-button:hover,
-#next-button:hover {
-    width: 20%;  
+#previous-text, #next-text {
+    opacity: 1;
 }
 
 #previous-button:hover #previous-text,
@@ -198,7 +197,7 @@ footer{
 
 .icon-image{
     padding-top: 0.5%;
-    width: 2vw;
+    width: 32px;
     height: 5vh;
     aspect-ratio: 16/9;
 }
@@ -250,7 +249,8 @@ footer{
   #progress-container {
     position: relative;
     width: 20%;
-    height: 3vh;
+    height: 1.5vh;
+    background-color: #ddd;
     border-radius: 25px;
     overflow: hidden;
   }
@@ -268,7 +268,7 @@ footer{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 18px;
+    font-size: 9px;
     font-weight: bold;
     color: white;
   }
@@ -385,4 +385,32 @@ footer{
         padding-left: 5px;
     }
 
+    #previous-button:hover #previous-text,
+    #next-button:hover #next-text {
+        opacity: 1;
+    }
+
+    #previous-button:hover #left-arrow,
+    #next-button:hover #right-arrow {
+        transform: translateX(0%);   
+    }
+
+    #left-arrow,
+    #right-arrow {
+        width: 80%;
+        transition: transform 0.5s ease;  
+    }
+
+    #previous-button:hover #left-arrow {
+        transform: translateX(0%);  
+    }
+
+    #next-button:hover #right-arrow {
+        transform: translateX(0%);   
+    }
+
+    .icon-image{
+        width: 24px;
+        height: 24px;
+    }
 }

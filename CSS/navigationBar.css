@@ -109,13 +109,17 @@ header{
         margin-right: 0;
         margin-bottom: 0;
         top: 21%;
-        right: 18.7%;
+        right: 11.7%;
     }
 
     #nav-bar ul{
         list-style: none;
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        gap: 0px;
+    }
+
+    .navBarOption{
+        width: 200%;
     }
 }
