@@ -1,5 +1,5 @@
-const previews = ["./Images/Ferrari Symbol.png", "./Images/Mlungisi Logo.png", "./Images/Trigger Tempo.png", "./Images/Bullets Hurt.png", "./Images/Smash Botato.png", "./Images/Prop Hunt.png"];
-const pages = ["./Ferrari Website/Ferrari-Website.html", "./Mlungisi Foundation/Mlungisi-Foundation.html", "./Tempo Trigger/Tempo-Trigger.html", "./Bullets Hurt/Bullets-Hurt.html", "./Smash Botato/Smash-Botato.html", "./Hide And See-bu/Hide-And-See-bu.html"];
+const previews = ["./Images/Ferrari Symbol.png", "./Images/Rumble.png", "./Images/Mlungisi Logo.png" , "./Images/Trigger Tempo.png", "./Images/Bullets Hurt.png", "./Images/Prop Hunt.png"];
+const pages = ["./Ferrari Website/Ferrari-Website.html", "./Rumble/Rumble.html", "./Mlungisi Foundation/Mlungisi-Foundation.html" , "./Tempo Trigger/Tempo-Trigger.html", "./Bullets Hurt/Bullets-Hurt.html", "./Hide And See-bu/Hide-And-See-bu.html"];
 let carouselDots = [];
 const dotContainer = document.querySelector("#carousel-dots");
 const image = document.querySelector("#preview-image");
