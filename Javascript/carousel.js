@@ -168,7 +168,7 @@ function changeImage(newSrc) {
       image.src = newSrc;
         setTimeout(() => {
             image.style.opacity = 1;
-        }, 100); 
+        }, 500); 
     }, 500); 
 }
 
