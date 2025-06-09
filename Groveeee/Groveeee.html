@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amro Ahmed</title>
+    <link rel="stylesheet" href="../CSS/homePage.css" />
+    <script type="module">
+      import { loadNavbar } from "../JavaScript/navigationBar.js";
+      loadNavbar("Home");
+    </script>
+    <link rel="stylesheet" href="../CSS/navigationBar.css" />
+    <link rel="stylesheet" href="../CSS/generalStyling.css" />
+    <link rel="stylesheet" href="../CSS/projectDisplay.css" />
+    <script src="../Javascript/cursor.js" defer></script>
+    <script src="../Javascript/projectDisplay.js" defer></script>
+    <link rel="icon" href="../Images/Website Logo.png" type="image/x-icon" />
+  </head>
+
+  <body>
+    <header>
+      <div id="name-section">
+        <h1 id="name-logo">Amro Ahmed</h1>
+      </div>
+      <div id="burger-menu">
+        <svg
+          id="burger-svg"
+          width="120"
+          height="120"
+          viewBox="0 0 84 84"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g id="Frame 1">
+            <line id="bottom-line" x1="20" y1="35.5" x2="54" y2="35.5" />
+            <line id="top-line" x1="20" y1="46.5" x2="54" y2="46.5" />
+          </g>
+        </svg>
+        <nav id="nav-bar"></nav>
+      </div>
+    </header>
+
+    <main>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="goo"
+        version="1.1"
+        width="100%"
+      >
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur
+              in="SourceGraphic"
+              stdDeviation="6"
+              result="blur"
+            ></feGaussianBlur>
+            <feColorMatrix
+              in="blur"
+              mode="matrix"
+              values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 35 -15"
+              result="goo"
+            ></feColorMatrix>
+            <feComposite
+              in="SourceGraphic"
+              in2="goo"
+              operator="atop"
+            ></feComposite>
+          </filter>
+        </defs>
+      </svg>
+
+      <div id="cursor"></div>
+
+      <section class="project-container">
+        <div class="project-overview">
+          <div class="item">
+            <svg
+              id="visual-display"
+              viewBox="0 0 200 200"
+              width="200"
+              height="200"
+            >
+              <circle
+                id="circle"
+                cx="100"
+                cy="100"
+                r="30"
+                fill="rgb(32, 31, 31)"
+              />
+            </svg>
+          </div>
+          <div class="project-description item">
+            <h1 id="project-heading">Groveeee</h1>
+            <p>
+              Groveeee is a beach event listing web app developed during my
+              first experience with React. It showcases beach-related events and
+              includes features such as a favorites system, client-side routing,
+              global state management with useContext, and side effect handling
+              with useEffect, among other core React functionalities.
+            </p>
+            <div class="project-properties">
+              <div id="project-role" class="project-property">
+                Role: <br />
+                Designer & Developer
+              </div>
+              <div id="project-type" class="project-property">
+                Type: <br />
+                Website
+              </div>
+              <div id="project-date" class="project-property">
+                Date: <br />
+                2025
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="scroll-text">Scroll</div>
+
+        <div id="project-breakdown">
+          <h1 id="breakdown-heading">Project Breakdown</h1>
+          <p>
+            Groveeee is a beach event listing application built as part of my
+            first project using React. It serves as a central hub for
+            discovering beach-related events and was designed to help users find
+            and favorite events with ease.
+          </p>
+          <p>
+            This project incorporates core React concepts such as
+            component-based architecture, React Router for client-side
+            navigation, useContext for global state management, and useEffect
+            for handling side effects like data fetching.
+          </p>
+          <p>
+            The favorites functionality allows users to mark events they’re
+            interested in, showcasing dynamic rendering and persistent state
+            handling. Overall, Groveeee helped solidify my understanding of
+            React fundamentals while delivering a clean and user-focused
+            experience.
+          </p>
+
+          <button
+            id="view-website-button"
+            class="buttons"
+            onclick="window.open('https://AmroChewsChappies.github.io/Dragonfly-App/', '_blank')"
+          >
+            <span>View Website</span>
+          </button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
